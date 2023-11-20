@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teclados Especiais</title>
+    <link rel="stylesheet" href="Teclados_Especiais_CSS.css">
+</head>
+<body>
+<header>
+    <h1>Teclados Especiais</h1>
+    <p>Pressione Enter para focar no link e voltar para a página inicial:</p>
+    <p>Utilize as teclas de seta para cima e para baixo para a rolagem da tela.</p>
+    <a href="index.html" id="backToHome" tabindex="0">Voltar para a página inicial</a>
+</header>
+
+<main>
+    <section>
+        <h2>O que são Teclados Especiais?</h2>
+        <p>Os teclados especiais são dispositivos de entrada alternativos projetados para atender às necessidades de pessoas com deficiências motoras, permitindo que elas digitem e interajam com computadores de maneira mais acessível.</p>
+    </section>
+
+    <section>
+        <h2>Tipos de Teclados Especiais</h2>
+        <p>Existem diferentes tipos de teclados especiais, incluindo teclados com disposições de teclas modificadas, teclados virtuais e teclados acionados por movimentos dos olhos ou da cabeça.</p>
+    </section>
+
+    <section>
+        <h2>Como Funcionam?</h2>
+        <p>Os teclados especiais adaptam-se às necessidades específicas dos usuários, oferecendo opções de entrada personalizadas, como teclas maiores, espaçamento diferenciado ou métodos de entrada alternativos, como reconhecimento de voz.</p>
+        <p>Os leitores de voz, também conhecidos como softwares de reconhecimento de voz, são programas que convertem a fala humana em texto. Esses programas utilizam algoritmos de reconhecimento de voz para interpretar e transcrever palavras faladas em texto que pode ser exibido em um dispositivo.</p>
+    </section>
+
+    <section>
+        <!-- Imagem do teclado inclusivo -->
+        <div style="text-align: center;">
+            <img src="images/teclado1.jpg" alt="Teclado Inclusivo" aria-label="Imagem de um Teclado Inclusivo">
+            <p>Legenda: Imagem ilustrativa de um Teclado Inclusivo</p>
+        </div>
+    </section>
+
+    <section>
+        <!-- Imagem do teclado em Braille -->
+        <div style="text-align: center;">
+            <img src="images/tecladobraile.webp" alt="Teclado em Braille" aria-label="Imagem de um Teclado em Braille">
+            <p>Legenda: Imagem ilustrativa de um Teclado em Braille</p>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Adicionando foco ao link para voltar à página inicial
+    const backToHomeLink = document.getElementById('backToHome');
+    backToHomeLink.addEventListener('keydown', function(event) {
+        if (event.code === 'Enter' || event.code === 'Space') {
+            window.location.href = this.href;
+        }
+    });
+
+    // Adicionando foco no link ao carregar a página
+    window.addEventListener('DOMContentLoaded', function() {
+        backToHomeLink.focus();
+    });
+</script>
+</body>
+</html>
+
+
+
+
+

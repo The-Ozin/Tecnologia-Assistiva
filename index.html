@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página inicial - Tecnologia Assistiva</title>
+    <link rel="stylesheet" href="PáginaInicial_CSS.css">
+</head>
+
+<body>
+<header>
+    <h1>Bem-vindo ao Site de Tecnologia Assistiva</h1>
+    <p>Este site foi criado para discutir e destacar a importância da Tecnologia Assistiva na vida das pessoas com deficiência.</p>
+    <nav class="tutorial" aria-label="Instruções de navegação">
+        <p>Para navegar entre os links, utilize as teclas de seta para cima e para baixo. Pressione Enter para acessar o link focado.</p>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>O que é Tecnologia Assistiva?</h2>
+        <p>A Tecnologia Assistiva refere-se a dispositivos, softwares e tecnologias projetadas para auxiliar pessoas com deficiência a superar desafios e melhorar sua independência e qualidade de vida.</p>
+        <p>Esses recursos podem variar desde dispositivos simples, como bengalas, até tecnologias avançadas, como leitores de tela, softwares de reconhecimento de voz e próteses.</p>
+    </section>
+
+    <section>
+        <h2>Conteúdo do Site</h2>
+        <nav id="menu" role="navigation" aria-label="Menu principal">
+            <ul>
+                <li><a href="Leitores_de_Tela.html" role="menuitem">Leitores de Tela</a></li>
+                <li><a href="Teclados_Especiais.html" role="menuitem">Teclados Especiais</a></li>
+                <li><a href="SRV.html" role="menuitem">Softwares de Reconhecimento de Voz</a></li>
+                <li><a href="Acessibilidade.html" role="menuitem">Dicas de Acessibilidade</a></li>
+            </ul>
+        </nav>
+    </section>
+</main>
+
+<footer role="contentinfo">
+    <h3>Para melhorar a acessibilidade desse site e promover feedback, entre em contato com o meu email @theoravaglia@gmail.com</h3>
+</footer>
+
+<script>
+    const menuItems = document.querySelectorAll('#menu ul li a');
+    let focusedIndex = 0;
+
+    document.addEventListener('keydown', function(event) {
+        if (event.code === 'ArrowDown') {
+            focusedIndex = (focusedIndex + 1) % menuItems.length;
+            menuItems[focusedIndex].focus();
+            event.preventDefault();
+        } else if (event.code === 'ArrowUp') {
+            focusedIndex = (focusedIndex - 1 + menuItems.length) % menuItems.length;
+            menuItems[focusedIndex].focus();
+            event.preventDefault();
+        } else if (event.code === 'Enter' || event.code === 'Space') {
+            window.location.href = menuItems[focusedIndex].href;
+        }
+    });
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

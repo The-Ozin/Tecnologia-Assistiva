@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Leitores de Tela</title>
+    <link rel="stylesheet" href="Leitores_de_Tela_CSS.css">
+</head>
+<body>
+<header>
+    <h1>Leitores de Tela</h1>
+    <p>Pressione Enter para focar no link e voltar para a página inicial:</p>
+    <p>Utilize as teclas de seta para cima e para baixo para a rolagem da tela.</p>
+    <a href="index.html" id="backToHome" tabindex="0">Voltar para a página inicial</a>
+</header>
+
+<main>
+    <section>
+        <!-- Conteúdo sobre Leitores de Tela -->
+        <h2>O que são Leitores de Tela?</h2>
+        <p>Os leitores de tela são programas de software que fornecem saída de áudio ou braille, permitindo que pessoas com deficiência visual possam navegar e interagir com computadores e dispositivos.</p>
+    </section>
+
+    <section>
+        <h2>Como funcionam?</h2>
+        <p>Os leitores de tela interpretam e traduzem o conteúdo visual em saída de áudio ou braille, permitindo que os usuários com deficiência visual possam acessar e interagir com aplicativos, sites e outras interfaces digitais.</p>
+        <p>Esses softwares funcionam analisando o conteúdo da tela e utilizando tecnologia de síntese de voz ou dispositivos táteis (como displays braille) para transmitir as informações aos usuários.</p>
+        <p>Além disso, os leitores de tela geralmente permitem que os usuários personalizem a forma como as informações são apresentadas, como a velocidade da fala, o volume ou até mesmo a síntese de voz utilizada.</p>
+    </section>
+
+    <section>
+        <h2>Exemplos de Leitores de Tela</h2>
+        <p>Existem diversos leitores de tela disponíveis, como o NVDA (NonVisual Desktop Access), JAWS (Job Access With Speech), VoiceOver (para dispositivos Apple) e Orca (para ambientes Linux).</p>
+    </section>
+
+    <section>
+        <!-- Adição da imagem com texto alternativo -->
+        <div style="text-align: center;">
+            <img src="images/SL.jpg" alt="Leitores de Tela" aria-label="Imagem ilustrativa de Leitores de Tela">
+            <p>Legenda: Imagem ilustrativa de Leitores de Tela</p>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Adicionando foco ao link para voltar à página inicial
+    const backToHomeLink = document.getElementById('backToHome');
+    backToHomeLink.addEventListener('keydown', function(event) {
+        if (event.code === 'Enter' || event.code === 'Space') {
+            window.location.href = this.href;
+        }
+    });
+
+    // Adicionando foco no link ao carregar a página
+    window.addEventListener('DOMContentLoaded', function() {
+        backToHomeLink.focus();
+    });
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #6A0DAD;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #6A0DAD; /* Roxo */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6A0DAD;
+    color: white;
+}
+
+h3 {
+    margin-top: 1000px;
+}
+
+a {
+    color: white;
+}
+

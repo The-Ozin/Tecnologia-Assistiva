@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Softwares de Reconhecimento de Voz</title>
+  <link rel="stylesheet" href="Leitores_de_Tela_CSS.css">
+</head>
+<body>
+<header>
+  <h1>Softwares de Reconhecimento de Voz</h1>
+  <p>Utilize as setas para cima e para baixo para navegar nos links e Enter para direcionar.Utilize 1 e 7 na parte direita do teclado para a rolagem da página.</p>
+  <a href="index.html" id="backToHome" tabindex="0">Voltar para a página inicial</a>
+</header>
+
+<main>
+  <section>
+    <h2>O que são Softwares de Reconhecimento de Voz?</h2>
+    <p>Os softwares de reconhecimento de voz são programas que convertem fala em texto, permitindo que usuários ditem comandos ou texto para interagir com dispositivos ou realizar tarefas sem o uso de teclados ou mouse.</p>
+    <p>Esses softwares têm sido essenciais para proporcionar acessibilidade a pessoas com deficiência motora, visual ou outras limitações que possam dificultar o uso de métodos tradicionais de entrada de texto.</p>
+  </section>
+
+  <section>
+    <h2>Funcionamento dos Softwares de Reconhecimento de Voz</h2>
+    <p>Esses softwares analisam e interpretam padrões de fala, convertendo-os em texto compreensível para o sistema operacional ou aplicativo em questão, possibilitando comandos por voz e transcrição de texto.</p>
+    <p>Por meio de algoritmos avançados de processamento de linguagem natural e aprendizado de máquina, esses programas conseguem reconhecer e interpretar a fala humana, adaptando-se aos padrões e variações individuais de cada usuário.</p>
+  </section>
+
+  <section>
+    <h2>Exemplos de Softwares de Reconhecimento de Voz</h2>
+    <p>Existem vários softwares de reconhecimento de voz disponíveis, incluindo o Dictation Pro, Dragon NaturallySpeaking, Google Speech-to-Text, entre outros, que oferecem diferentes recursos e níveis de precisão na transcrição de voz para texto.</p>
+    <p>Um exemplo é o <a href="https://www.deskshare.com/speech-to-text-software.aspx" target="_blank" rel="noopener noreferrer" style="color: #6A0DAD;">Dictation Pro</a>.</p>
+  </section>
+</main>
+
+<script>
+  const links = Array.from(document.querySelectorAll('a'));
+
+  let currentIndex = -1;
+
+  window.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      if (event.key === 'ArrowDown') {
+        currentIndex = (currentIndex + 1) % links.length;
+      } else {
+        currentIndex = (currentIndex - 1 + links.length) % links.length;
+      }
+      links[currentIndex].focus();
+    } else if (event.key === 'Enter' && currentIndex >= 0) {
+      window.location.href = links[currentIndex].href;
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
